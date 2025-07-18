@@ -9,7 +9,7 @@ resource "apstra_raw_json" "ddos_dashboard" {
           label = "System_Rebooted_in_Last_Hour",
           description = "",
           type = "stage",
-          probe_id = "ee270ebf-e055-4b5e-8c46-84662bbf2f61",
+          probe_id = apstra_raw_json.uptime_probe.id,
           stage_name = "System_Rebooted_in_Last_Hour",
           filter = "value = \"true\"",
           visible_columns = [
@@ -35,7 +35,7 @@ resource "apstra_raw_json" "ddos_dashboard" {
           label = "System_Rebooted_in_Last_Day",
           description = "",
           type = "stage",
-          probe_id = "ee270ebf-e055-4b5e-8c46-84662bbf2f61",
+          probe_id = apstra_raw_json.uptime_probe.id,
           stage_name = "System_Rebooted_in_Last_Day",
           filter = "value = \"true\"",
           visible_columns = [
@@ -61,7 +61,7 @@ resource "apstra_raw_json" "ddos_dashboard" {
           label = "System_Rebooted_in_Last_Week",
           description = "",
           type = "stage",
-          probe_id = "ee270ebf-e055-4b5e-8c46-84662bbf2f61",
+          probe_id = apstra_raw_json.uptime_probe.id,
           stage_name = "System_Rebooted_in_Last_Week",
           filter = "value = \"true\"",
           visible_columns = [
