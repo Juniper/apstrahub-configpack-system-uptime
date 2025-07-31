@@ -12,7 +12,7 @@ resource "apstra_raw_json" "uptime_probe" {
       "name": "System_Uptime",
       "type": "extensible_data_collector",
       "properties": {
-        "service_name": "System_Uptime",
+        "service_name": "System_Uptime_${var.blueprint_id}",
         "service_interval": "60",
         "value_map": {},
         "graph_query": [
