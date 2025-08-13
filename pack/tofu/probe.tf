@@ -5,14 +5,14 @@ resource "apstra_raw_json" "uptime_probe" {
   ]
   payload   = <<-EOT
   {
-  "label": "Device Uptime",
+  "label": "${var.name}",
   "description": "",
   "processors": [
     {
       "name": "System_Uptime",
       "type": "extensible_data_collector",
       "properties": {
-        "service_name": "System_Uptime_${var.blueprint_id}",
+        "service_name": "${var.name}_${var.blueprint_id}",
         "service_interval": "60",
         "value_map": {},
         "graph_query": [
